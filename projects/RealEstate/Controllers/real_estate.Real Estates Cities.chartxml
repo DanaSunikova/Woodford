@@ -1,0 +1,26 @@
+﻿<EntityChart>
+  <Name>Real Estates Cities</Name>
+  <Kind>Column</Kind>
+  <LimitCount>3</LimitCount>
+  <Axis>address_city</Axis>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+  </MinValue>
+  <MaxValue>
+    <Color>#FF0000FF</Color>
+  </MaxValue>
+  <TargetValue>
+    <Color>#FF0000FF</Color>
+  </TargetValue>
+  <SerializedBindings/>
+  <Attributes>
+    <EntityName>real_estate</EntityName>
+    <CamelCase>real_estate</CamelCase>
+  </Attributes>
+  <Series>
+    <Series>
+      <Attribute>address_city</Attribute>
+      <Color>#FF0000FF</Color>
+    </Series>
+  </Series>
+</EntityChart>
