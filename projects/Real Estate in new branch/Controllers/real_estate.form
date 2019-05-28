@@ -1,0 +1,94 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>real_estate</EntityName>
+  <CamelCase>real_estate</CamelCase>
+  <WorkflowItemChanged>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.Seller.@this&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:Entity.seller&lt;/arg&gt;&lt;/function&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:address_postalcode&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.address_postalcode&lt;/var&gt;&lt;op&gt;RegexDoesNotMatch&lt;/op&gt;&lt;arg&gt;String:^[0-9 ]+$&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.address_postalcode.ErrorMessage&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:&amp;quot;Postal code is not correctly formated!&amp;quot;&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.address_postalcode.ErrorMessage&lt;/var&gt;&lt;func&gt;Clear&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowItemChanged>
+  <WorkflowSave>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.price&lt;/var&gt;&lt;op&gt;LessThan&lt;/op&gt;&lt;arg&gt;Money:50000&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;WarningMessage&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:&amp;quot;Are you sure you want to sell it this cheap?&amp;quot;&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowSave>
+  <WorkflowCommandExecute>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Command.Name&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:custom_copy_address&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.address_street&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:Shared.Seller.address1_line1&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.address_city&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:Shared.Seller.address1_city&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.address_postalcode&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:Shared.Seller.address1_postalcode&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.latitude&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:Shared.Seller.address1_latitude&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.longitude&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:Shared.Seller.address1_longitude&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowCommandExecute>
+  <WorkflowCommandCanExecute>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Command.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Command.Name&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:custom_copy_address&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Command.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.seller&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Command.Name&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:custom_copy_address&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Shared.Seller.address1_line1&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Shared.Seller.address1_city&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Shared.Seller.address1_postalcode&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Command.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowCommandCanExecute>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;SharedVariable usage="OnChangeEnabled"&gt;&lt;Name&gt;Seller&lt;/Name&gt;&lt;CrmType&gt;Entity&lt;/CrmType&gt;&lt;InnerType&gt;contact&lt;/InnerType&gt;&lt;/SharedVariable&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <PrimaryCommands>custom_copy_address|Copy Seller Addr|</PrimaryCommands>
+  <SharedVariableNames>
+    <string>Seller.address1_city</string>
+    <string>Seller.address1_country</string>
+    <string>Seller.address1_latitude</string>
+    <string>Seller.address1_line1</string>
+    <string>Seller.address1_line2</string>
+    <string>Seller.address1_line3</string>
+    <string>Seller.address1_longitude</string>
+    <string>Seller.address1_postalcode</string>
+    <string>Seller.address1_stateorprovince</string>
+    <string>Seller.createdon</string>
+    <string>Seller.emailaddress1</string>
+    <string>Seller.fax</string>
+    <string>Seller.firstname</string>
+    <string>Seller.id</string>
+    <string>Seller.jobtitle</string>
+    <string>Seller.lastname</string>
+    <string>Seller.mobilephone</string>
+    <string>Seller.modifiedon</string>
+    <string>Seller.name</string>
+    <string>Seller.originatingleadid</string>
+    <string>Seller.ownerid</string>
+    <string>Seller.parentcustomerid</string>
+    <string>Seller.statuscode</string>
+    <string>Seller.telephone1</string>
+  </SharedVariableNames>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="name"/>
+        <DetailItem SchemaName="description"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="address_street"/>
+        <DetailItem SchemaName="address_city"/>
+        <DetailItem SchemaName="address_postalcode"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="seller">
+          <LookupViews>&lt;extra&gt;&lt;filter entity="contact"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="contact"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="address1_city" operator="eq" value="{{address_city}}"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="Image" image="true" Style="FormNoteImageNew">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab">
+      <Name>Seller</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="Seller.name"/>
+        <DetailItem SchemaName="Seller.address1_line1"/>
+        <DetailItem SchemaName="Seller.address1_city"/>
+        <DetailItem SchemaName="Seller.address1_country"/>
+        <DetailItem SchemaName="Seller.address1_postalcode"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" DocCommands="0">
+      <Name>Real Estates List (*)</Name>
+      <Binding SchemaName="real_estate.@virtual"/>
+      <Views>&lt;extra&gt;&lt;views&gt;real_estate.*:real_estate.@Grid&lt;/views&gt;&lt;filter entity="real_estate"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="real_estate"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="address_city" operator="eq" value="{{address_city}}"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+    </FormTab>
+    <FormTab xsi:type="SignatureTab">
+      <Name>Image</Name>
+      <NoteSubject>FormImage</NoteSubject>
+      <EntityName>annotation</EntityName>
+      <Commands>4100</Commands>
+    </FormTab>
+    <FormTab xsi:type="IFrameTab">
+      <Name>Google Search</Name>
+      <Url>https://www.google.com/search?q={address_city}</Url>
+    </FormTab>
+    <FormTab xsi:type="MapTab">
+      <Name>Map</Name>
+      <CoordinatesBinding>latitude;longitude</CoordinatesBinding>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

@@ -1,0 +1,7 @@
+﻿Manufacturer=Company
+ProductTitle=My CRM
+ProductSubTitle=For training purpose
+PoweredBy=Powered by Resco.Net
+Icon=Logo.Logo.png
+Website=myweb.com
+SupportEmail=support@email.com

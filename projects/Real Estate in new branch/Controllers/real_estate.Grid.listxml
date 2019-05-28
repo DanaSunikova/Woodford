@@ -1,0 +1,41 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>real_estate</EntityName>
+    <CamelCase>real_estate</CamelCase>
+  </Attributes>
+  <Name>Grid</Name>
+  <Kind>AssociatedList</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>address_city</string>
+    <string>id</string>
+    <string>name</string>
+    <string>price</string>
+  </SerializedBindings>
+  <MaxColumns>3</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>100</Width>
+      <Height>100</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>2,2,96,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="">
+          <IsConstant>true</IsConstant>
+          <StyleName>ListNoteImageNew</StyleName>
+          <Bounds>2,32,96,66</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>
