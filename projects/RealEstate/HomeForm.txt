@@ -1,1 +1,1 @@
-﻿@Dashboard,@Tourplan,@Setup,@About,#Real Estate,real_estate,contact,@Map,account,##
+﻿@Dashboard,@Tourplan,@Setup,@About,#Real Estate,real_estate,contact,@Map,##
