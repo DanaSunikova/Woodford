@@ -1,0 +1,13 @@
+﻿Open=open
+Find=find
+GoHome=go home
+GoBack=go back
+GoNext=go next
+CloseForm=close form
+ReadFocus=read focus
+ReadMore=read more
+ReadCommands=read commands
+StartCommand=start
+SetValue=input
+SetOption=set option
+Help=help
